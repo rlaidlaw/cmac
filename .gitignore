@@ -1,3 +1,9 @@
+# Data
+filemgr/data
+pge/data
+resource/data
+workflow/data
+
 # Docs
 filemgr/doc
 pge/doc
