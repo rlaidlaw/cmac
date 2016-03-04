@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Java
+export JAVA_HOME=/usr/java/jdk1.7.0_79
+
 # UNIX
 export CMAC_HOME=/usr/local/cmac
 export OODT_HOME=$CMAC_HOME/oodt
