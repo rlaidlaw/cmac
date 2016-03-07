@@ -1,0 +1,13 @@
+#!/bin/bash
+
+$RESOURCE_HOME/bin/batch_stub 2001
+$RESOURCE_HOME/bin/batch_stub 2002
+$RESOURCE_HOME/bin/batch_stub 2003
+$RESOURCE_HOME/bin/batch_stub 2004
+$RESOURCE_HOME/bin/batch_stub 2005
+$RESOURCE_HOME/bin/batch_stub 2006
+$RESOURCE_HOME/bin/batch_stub 2007
+$RESOURCE_HOME/bin/batch_stub 2008
+$RESOURCE_HOME/bin/batch_stub 2009
+$RESOURCE_HOME/bin/batch_stub 2010
+
