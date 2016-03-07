@@ -1,4 +1,5 @@
 #!/bin/bash
+#
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE.txt file distributed with
 # this work for additional information regarding copyright ownership.  The ASF
@@ -12,23 +13,16 @@
 # distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
 # License for the specific language governing permissions and limitations
-# under the License. 
-
-export ORIG_DIR=`pwd`
-export DIR=`dirname $0`
-cd $DIR
-export DIR_PATH=`pwd`
-cd $ORIG_DIR
+# under the License.  
 
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <status, e.g., QUEUED, RSUBMIT, etc.>"
     exit 1
 else
-    pushd $DIR_PATH
-    for id in `./wmgr-client --url http://localhost:9001 --operation --getFirstPage --status $1 | awk '{print $2}' | cut -f 2 -d = | cut -f 1 -d ,` 
+    for id in `${WORKFLOW_HOME}/bin/wmgr-client --url $WORKFLOW_URL --operation --getFirstPage --status $1 | awk '{print $2}' | cut -f 2 -d = | cut -f 1 -d ,` 
         do
             echo "Killing workflow with ID $id"
-            ./wmkill $id
+            ${WORKFLOW_HOME}/bin/wmkill $id
     done
-    popd
 fi
+

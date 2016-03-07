@@ -1,4 +1,5 @@
 #!/bin/bash
+#
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE.txt file distributed with
 # this work for additional information regarding copyright ownership.  The ASF
@@ -14,18 +15,10 @@
 # License for the specific language governing permissions and limitations
 # under the License.  
 
-export ORIG_DIR=`pwd`
-export DIR=`dirname $0`
-cd $DIR
-export DIR_PATH=`pwd`
-cd $ORIG_DIR
-
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <workflow instance id>"
     exit 1
 else
-    pushd $DIR_PATH
-    ./wmgr-client --url http://localhost:9001 --operation --stopWorkflowInst --id $1
-    popd
+    ${WORKFLOW_HOME}/bin/wmgr-client --url $WORKFLOW_URL --operation --stopWorkflowInst --id $1
 fi
 
