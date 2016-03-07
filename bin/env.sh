@@ -42,9 +42,9 @@ export JOBS_HOME=$DATA_HOME/jobs
 alias oodt=$OODT_BIN/oodt.sh
 
 # Batch Stubs
-alias start_stubs=$RESOURCE_HOME/bin/start_stubs.sh
-alias stop_stubs=$RESOURCE_HOME/bin/stop_stubs.sh
-alias check_stubs=$RESOURCE_HOME/bin/check_stubs.sh
+alias start_stubs=$RESOURCE_HOME/bin/start_stubs
+alias stop_stubs=$RESOURCE_HOME/bin/stop_stubs
+alias check_stubs=$RESOURCE_HOME/bin/check_stubs
 
 # Workflow Manager Client
 alias workflows='$WORKFLOW_HOME/bin/wmgr-client --url $WORKFLOW_URL --operation --getWorkflows'
