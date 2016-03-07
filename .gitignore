@@ -1,27 +1,28 @@
 # Data
-filemgr/data
-pge/data
-resource/data
-workflow/data
+data/
+filemgr/data/
+pge/data/
+resource/data/
+workflow/data/
 
 # Docs
-filemgr/doc
-pge/doc
-resource/doc
-workflow/doc
+filemgr/doc/
+pge/doc/
+resource/doc/
+workflow/doc/
 
 # Logs
-filemgr/logs
-pge/logs
-resource/logs
-workflow/logs
+filemgr/logs/
+pge/logs/
+resource/logs/
+workflow/logs/
 
 # Libs
-filemgr/lib
-pcs/lib
-pge/lib
-resource/lib
-workflow/lib
+filemgr/lib/
+pcs/lib/
+pge/lib/
+resource/lib/
+workflow/lib/
 
 # PIDs
 run/
