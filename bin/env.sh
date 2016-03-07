@@ -21,9 +21,9 @@ export WORKFLOW_PORT=9001
 export RESOURCE_PORT=9002
 
 # URLs
-export FILEMGR_URL=http://cmac:$FILEMGR_PORT
-export WORKFLOW_URL=http://cmac:$WORKFLOW_PORT
-export RESOURCE_URL=http://cmac:$RESOURCE_PORT
+export FILEMGR_URL=http://localhost:$FILEMGR_PORT
+export WORKFLOW_URL=http://localhost:$WORKFLOW_PORT
+export RESOURCE_URL=http://localhost:$RESOURCE_PORT
 
 # Executables
 export FILEMGR_EXEC=filemgr
