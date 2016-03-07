@@ -33,6 +33,11 @@ export RESOURCE_EXEC=resmgr
 # PCS
 alias pcs_stat='$PCS_HOME/scripts/pcs_stat'
 
+# Data
+export DATA_HOME=$CMAC_HOME/data
+export ARCHIVE_HOME=$DATA_HOME/archive
+export JOBS_HOME=$DATA_HOME/jobs
+
 # OODT
 alias oodt=$OODT_BIN/oodt.sh
 
