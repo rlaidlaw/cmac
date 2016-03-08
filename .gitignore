@@ -27,3 +27,6 @@ workflow/lib/
 # PIDs
 run/
 
+# Test Data
+test/
+
