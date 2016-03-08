@@ -15,7 +15,7 @@
   limitations under the License.
 -->
 <cas:workflowevents xmlns:cas="http://oodt.jpl.nasa.gov/1.0/cas">
-  <event name="cmac">
+  <event name="CmacWorkflow">
     <workflow id="urn:cmac:CmacWorkflow" />
   </event>
 </cas:workflowevents>
