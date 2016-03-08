@@ -6,8 +6,6 @@ export JAVA_HOME=/usr/java/jdk1.7.0_79
 # UNIX
 export CMAC_HOME=/usr/local/cmac
 export OODT_HOME=$CMAC_HOME/oodt
-export OODT_DATA=$OODT_HOME/data
-export OODT_RUN=$OODT_HOME/run
 export OODT_BIN=$OODT_HOME/bin
 export FILEMGR_HOME=$OODT_HOME/filemgr
 export PCS_HOME=$OODT_HOME/pcs
@@ -34,7 +32,7 @@ export RESOURCE_EXEC=resmgr
 alias pcs_stat='$PCS_HOME/scripts/pcs_stat'
 
 # Data
-export DATA_HOME=$CMAC_HOME/data
+export DATA_HOME=$OODT_HOME/data
 export ARCHIVE_HOME=$DATA_HOME/archive
 export JOBS_HOME=$DATA_HOME/jobs
 
