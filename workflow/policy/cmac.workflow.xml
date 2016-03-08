@@ -4,8 +4,10 @@
 
   <tasks>
     <task id="urn:cmac:CmacIngestTask"/>
-    <task id="urn:cmac:CmacValidateTask"/>
-    <task id="urn:cmac:CmacPublishTask"/>
+    <!--
+      <task id="urn:cmac:CmacValidateTask"/>
+      <task id="urn:cmac:CmacPublishTask"/>
+    -->
   </tasks>
 
 </cas:workflow>
