@@ -25,7 +25,7 @@ the License.
     <dir path="[JobDir]" createBeforeExe="false">
       <files regExp=".*\.nc"
         metFileWriterClass="org.apache.oodt.cas.pge.writers.metlist.MetadataListPcsMetFileWriter"
-        args="[PgeHome]/extractors/metlistwriter/[PGETask_Name].xml"/>
+        args="[PGE_HOME]/extractors/metlistwriter/[PGETask_Name].xml"/>
     </dir>
   </output>
 
