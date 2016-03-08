@@ -18,7 +18,7 @@ limitations under the License.
 <cas:producttypes xmlns:cas="http://oodt.jpl.nasa.gov/1.0/cas">
 
   <type id="urn:cmac:NetCDF" name="NetCDF">
-    <repository path="file:/[ARCHIVE_HOME]"/>
+    <repository path="file://[ARCHIVE_HOME]"/>
     <versioner class="org.apache.oodt.cas.filemgr.versioning.ProductTypeMetVersioner"/>
     <description>NetCDF File</description>
     <metadata>
