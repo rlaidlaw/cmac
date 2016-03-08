@@ -7,6 +7,7 @@ export JAVA_HOME=/usr/java/jdk1.7.0_79
 export CMAC_HOME=/usr/local/cmac
 export OODT_HOME=$CMAC_HOME/oodt
 export OODT_BIN=$OODT_HOME/bin
+export OODT_RUN=$OODT_HOME/run
 export FILEMGR_HOME=$OODT_HOME/filemgr
 export PCS_HOME=$OODT_HOME/pcs
 export PGE_HOME=$OODT_HOME/pge
