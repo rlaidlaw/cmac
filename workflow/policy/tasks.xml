@@ -6,7 +6,7 @@
   (the "License"); you may not use this file except in compliance with
   the License.  You may obtain a copy of the License at
 
-      http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,149 +15,81 @@
   limitations under the License.
 -->
 <cas:tasks xmlns:cas="http://oodt.jpl.nasa.gov/1.0/cas">
-	<task id="urn:oodt:HelloWorld" name="Hello World"
-		class="org.apache.oodt.cas.workflow.examples.HelloWorld">
-		<conditions>
-			<condition id="urn:oodt:TrueCondition" />
-		</conditions>
-		<configuration>
-			<property name="Person" value="Chris" />
-		</configuration>
-	</task>
-	<task id="urn:oodt:GoodbyeWorld" name="Goodbye World"
-		class="org.apache.oodt.cas.workflow.examples.GoodbyeWorld">
-		<conditions>
-			<condition id="urn:oodt:TrueCondition" />
-		</conditions>
-		<configuration>
-			<property name="Person" value="Chris" />
-		</configuration>
-	</task>
-	<task id="urn:oodt:YoureStuck" name="You're Stuck"
-		class="org.apache.oodt.cas.workflow.examples.GoodbyeWorld">
-		<conditions>
-			<condition id="urn:oodt:FalseCondition" />
-		</conditions>
-		<configuration>
-			<property name="Person" value="Chris" />
-		</configuration>
-	</task>
-	<task id="urn:oodt:IntensiveTask" name="Processor Intensive Task"
-		class="org.apache.oodt.cas.workflow.examples.LongTask">
-		<conditions />
-		<configuration />
-	</task>
-	<task id="urn:oodt:IntensiveTaskWithWait" name="Intensive Waiter"
-		class="org.apache.oodt.cas.workflow.examples.LongTask">
-		<conditions>
-			<condition id="urn:oodt:LongCondition" />
-		</conditions>
-		<configuration />
-	</task>
-	<task id="urn:oodt:PropReplaceTask" name="PRTask"
-		class="org.apache.oodt.cas.workflow.examples.LongTask">
-		<conditions />
-		<configuration>
-			<property name="PathToReplace" value="[HOME]/my/path"
-				envReplace="true" />
-			<property name="DontReplaceMe" value="[HOME]/my/path"
-				envReplace="false" />
-			<property name="DontReplaceMeNoSpec" value="[HOME]/my/path" />
-		</configuration>
-	</task>
-	<task id="urn:oodt:NumIncrementTask" name="Num Increment Task"
-		class="org.apache.oodt.cas.workflow.examples.NumIncrementTask">
-		<conditions />
-		<configuration />
-	</task>
-	<task id="urn:oodt:RandomStatusUpdateTask"
-		name="Random Status Update"
-		class="org.apache.oodt.cas.workflow.examples.RandomStatusUpdateTask">
-		<conditions />
-		<configuration />
-	</task>
-	<task id="urn:oodt:TestMultiConditionTask"
-		name="Test Multi Condition"
-		class="org.apache.oodt.cas.workflow.examples.HelloWorld">
-		<conditions>
-			<condition id="urn:oodt:TrueCondition" />
-			<condition id="urn:oodt:FalseCondition" />
-		</conditions>
-		<configuration>
-			<property name="Person" value="Chris" />
-		</configuration>
-	</task>
-	<task id="urn:oodt:TestReqMetFieldsTask" name="Test Met Fields"
-		class="org.apache.oodt.cas.workflow.examples.LongTask">
-		<conditions />
-		<configuration />
-		<requiredMetFields>
-			<metfield name="numSeconds" />
-		</requiredMetFields>
-	</task>
-		<task id="urn:oodt:ExternalScriptTask" name="External Script Task"
-		class="org.apache.oodt.cas.workflow.examples.ExternScriptTaskInstance">
-		<conditions />
-		<configuration>
-		    <property name="ShellType" value="/bin/sh"/> <!-- or /bin/tcsh if you have tcsh shell envionment; or /usr/bin/ if you have a compiled program -->
-			<property name="PathToScript" value="/usr/local/sampleScript.sh"/> <!-- This should include the file name as well-->
-		</configuration>
-	</task>
-	<task id="urn:oodt:mailTask" name="Ingest e-Mail"
-		class="org.apache.oodt.cas.workflow.examples.MailTask">
-		<conditions/>
-		<configuration>
-			<property name="user.name" value="Costin"/>
-			<property name="msg.subject" value="Ingest Notification"/>
-			<property name="mail.to" value="chris.mattmann@jpl.nasa.gov"/>
-			<property name="mail.from" value="oodt@jpl.nasa.gov"/>
-		</configuration>
-	</task>	
-	<task id="urn:oodt:TestTimeoutTask" name="Test Timeout"
-		class="org.apache.oodt.cas.workflow.examples.LongTask">
-		<conditions>
-		   <condition id="urn:oodt:TimeoutCondition"/>
-		</conditions>
-		<configuration />
-		<requiredMetFields>
-			<metfield name="numSeconds" />
-		</requiredMetFields>
-	</task>	
-	<task id="urn:oodt:OptionalTask" name="Optional Task" 
-	    class="org.apache.oodt.cas.workflow.examples.LongTask">
-	  <conditions>
-	     <condition id="urn:oodt:OptionalCondition"/>
-	  </conditions>
-	  <configuration/>
-	  <requiredMetFields>
-	     <metfield name="numSeconds"/>
-	  </requiredMetFields>
-	</task>
-	<task id="urn:oodt:TaskWithLoad" name="Task with Load"
-	   class="org.apache.oodt.cas.workflow.examples.LongTask">
-	   <conditions>
-	   </conditions> 
-	   <configuration>
-	      <!--  now settable since OODT-602
-	            controls the load value of this task when running
-	            Workflow Manager with connection to the Resource Manager.
-	       -->
-	      <property name="TaskLoad" value="2"/>
-	   </configuration>  
-	</task>
-    <task id="urn:oodt:FilterTask" name="Filter Task"
-       class="org.apache.oodt.cas.workflow.examples.FilterTask">
-       <conditions>
-       </conditions> 
-       <configuration>
-          <!--  comma separated list of keys to remove from the metadata. -->
-          <property name="Remove_Key" value="ProductionDateTime"/>
-          <!-- you can list many of these Rename_[Key] parameters, to
-               remove specific keys from the metadata. Note that renames
-               are processed *first* before removes, so you can conceivably
-               rename a field, and then *remove* it too, so be careful.
-           -->
-          <property name="Rename_Filename" value="Prior_Filename"/>
-       </configuration>  
-    </task>
+
+  <task id="urn:cmac:CmacIngestTask" name="CmacIngestTask"
+    class="org.apache.oodt.cas.pge.StdPGETaskInstance">
+
+    <conditions/>
+
+    <configuration>
+      <property name="PGETask_Name" value="CmacIngest"/>
+      <property name="PGETask_ConfigFilePath"
+        value="[PGE_HOME]/policy/CmacIngest.xml" envReplace="true"/>
+      <property name="PGETask_DumpMetadata" value="true"/>
+      <property name="PCS_WorkflowManagerUrl" value="[WORKFLOW_URL]" envReplace="true"/>
+      <property name="PCS_FileManagerUrl" value="[FILEMGR_URL]" envReplace="true"/>
+      <property name="PCS_MetFileExtension" value="met"/>
+      <property name="PCS_ClientTransferServiceFactory"
+        value="org.apache.oodt.cas.filemgr.datatransfer.LocalDataTransferFactory"/>
+      <property name="QueueName" value="ingest-queue"/>
+      <property name="TaskLoad" value="1"/>
+
+      <requiredMetFields>
+        <metfield name="NetCdfFile"/>
+      </requiredMetFields>
+    </configuration>
+
+  </task>
+
+  <task id="urn:cmac:CmacValidateTask" name="CmacValidateTask"
+    class="org.apache.oodt.cas.pge.StdPGETaskInstance">
+
+    <conditions/>
+
+    <configuration>
+      <property name="PGETask_Name" value="CmacValidate"/>
+      <property name="PGETask_ConfigFilePath"
+        value="[PGE_HOME]/policy/CmacValidate.xml" envReplace="true"/>
+      <property name="PGETask_DumpMetadata" value="true"/>
+      <property name="PCS_WorkflowManagerUrl" value="[WORKFLOW_URL]" envReplace="true"/>
+      <property name="PCS_FileManagerUrl" value="[FILEMGR_URL]" envReplace="true"/>
+      <property name="PCS_MetFileExtension" value="met"/>
+      <property name="PCS_ClientTransferServiceFactory"
+        value="org.apache.oodt.cas.filemgr.datatransfer.LocalDataTransferFactory"/>
+      <property name="QueueName" value="validate-queue"/>
+      <property name="TaskLoad" value="1"/>
+
+      <requiredMetFields>
+        <metfield name="NetCdfFile"/>
+      </requiredMetFields>
+    </configuration>
+
+  </task>
+
+  <task id="urn:cmac:CmacPublishTask" name="CmacPublishTask"
+    class="org.apache.oodt.cas.pge.StdPGETaskInstance">
+
+    <conditions/>
+
+    <configuration>
+      <property name="PGETask_Name" value="CmacPublish"/>
+      <property name="PGETask_ConfigFilePath"
+        value="[PGE_HOME]/policy/CmacPublish.xml" envReplace="true"/>
+      <property name="PGETask_DumpMetadata" value="true"/>
+      <property name="PCS_WorkflowManagerUrl" value="[WORKFLOW_URL]" envReplace="true"/>
+      <property name="PCS_FileManagerUrl" value="[FILEMGR_URL]" envReplace="true"/>
+      <property name="PCS_MetFileExtension" value="met"/>
+      <property name="PCS_ClientTransferServiceFactory"
+        value="org.apache.oodt.cas.filemgr.datatransfer.LocalDataTransferFactory"/>
+      <property name="QueueName" value="publish-queue"/>
+      <property name="TaskLoad" value="1"/>
+
+      <requiredMetFields>
+        <metfield name="NetCdfFile"/>
+      </requiredMetFields>
+    </configuration>
+
+  </task>
+
 </cas:tasks>
+

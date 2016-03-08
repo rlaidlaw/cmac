@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cas:workflow xmlns:cas="http://oodt.jpl.nasa.gov/1.0/cas"
+  id="urn:cmac:CmacWorkflow" name="CmacWorkflow">
+
+  <tasks>
+    <task id="urn:cmac:CmacIngestTask"/>
+    <task id="urn:cmac:CmacValidateTask"/>
+    <task id="urn:cmac:CmacPublishTask"/>
+  </tasks>
+
+</cas:workflow>
+
