@@ -18,7 +18,7 @@ the License.
 <pgeConfig>
 
   <exe dir="[JobDir]" shellType="[BashShell]">
-    <cmd>rsync -av NetCdfFile [JobDir]</cmd>
+    <cmd>rsync -av [NetCdfFile] [JobDir]</cmd>
   </exe>
 
   <output>
