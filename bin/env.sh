@@ -46,6 +46,9 @@ alias start_stubs=$RESOURCE_HOME/bin/start_stubs
 alias stop_stubs=$RESOURCE_HOME/bin/stop_stubs
 alias check_stubs=$RESOURCE_HOME/bin/check_stubs
 
+# Workflow Scripts
+alias cmac=$WORKFLOW_HOME/bin/workflow_runners/CmacWorkflow.sh
+
 # Workflow Manager Client
 alias workflows='$WORKFLOW_HOME/bin/wmgr-client --url $WORKFLOW_URL --operation --getWorkflows'
 alias workflow_insts='$WORKFLOW_HOME/bin/wmgr-client --url $WORKFLOW_URL --operation --getWorkflowInsts'
